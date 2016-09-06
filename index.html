@@ -1,12 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Webpage Title</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
-  </head>
-  <body>
-    <p>Hello World!<p>
-  </body>
+<html>
+	<head>
+		<title>Lab2</title>
+		<link rel="stylesheet" href="css\lab2Styles.css">
+
+	</head>
+
+	<body onload= "scoreLoader()">
+
+		<h1> Memory Game </h1> <p>
+		You have 3 tries to find the 3 rocks under 3 different cups.
+		
+		<div class = "ui"> 
+			<div id= "score" > Score: 0</div>
+			<div id= "misses"> Misses: 0 </div>
+			<!--<div id= "level"> Level: 1 </div>-->
+
+		</div>
+
+		<table border="0">
+			<tr onMouseDown = "getYCoord(this)">
+				<td onMouseDown = "getXCoord(this)"> 
+					<img src= "images\cup.png" height= "25%" width = "25%"   id="img1x1" onMouseUp = "clickImg(this)">
+				</td>
+				<td  onMouseDown = "getXCoord(this)">
+					<img src= "images\cup.png" height= "25%" width = "25%"   id="img1x2" onMouseUp = "clickImg(this)">
+				</td>
+				<td onMouseDown = "getXCoord(this)">
+					<img src= "images\cup.png" height= "25%" width = "25%"   id="img1x3" onMouseUp = "clickImg(this)">
+				</td>
+			</tr>
+			<tr onMouseDown = "getYCoord(this)">
+				<td onMouseDown = "getXCoord(this)" >
+					<img src= "images\cup.png" height= "25%" width = "25%"   id="img2x1" onMouseUp = "clickImg(this)">
+				</td>
+				<td onMouseDown = "getXCoord(this)" >
+					<img src= "images\cup.png" height= "25%" width = "25%"   id="img2x2" onMouseUp = "clickImg(this)">
+				</td>
+				<td onMouseDown = "getXCoord(this)" >
+					<img src= "images\cup.png" height= "25%" width = "25%"   id="img2x3" onMouseUp = "clickImg(this)">
+				</td>
+			</tr>
+			<tr onMouseDown = "getYCoord(this)">
+				<td onMouseDown = "getXCoord(this)" id="img3x1">
+					<img src= "images\cup.png" height= "25%" width = "25%"   id="img3x1" onMouseUp = "clickImg(this)">
+				</td>
+				<td onMouseDown = "getXCoord(this)" id="img3x2">
+					<img src= "images\cup.png" height= "25%" width = "25%"   id="img3x2" onMouseUp = "clickImg(this)">
+				</td>
+				<td onMouseDown = "getXCoord(this)" id="img3x3">
+					<img src= "images\cup.png" height= "25%" width = "25%"   id="img3x3" onMouseUp = "clickImg(this)">
+				</td>
+			</tr>
+		</table>
+
+		<button id= "answerR" onClick = "showAnswer()"> Click To see Answer </button>
+		<script src="js/script.js"></script>
+	</body>
 </html>

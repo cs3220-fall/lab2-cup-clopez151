@@ -1,0 +1,28 @@
+html{
+	background-color: #708FA3;
+	font-family: calibri;
+}
+body{
+	min-width:800px;
+}
+img{
+	display:block;
+	max-height: 120px;
+	max-width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	-webkit-transform: rotate(180deg);
+
+}
+h1{
+	margin-top: 10px
+}
+.ui{
+	color: blue;
+	float: right;
+	position: relative;
+	bottom: 150px;
+	background-color: white;
+	padding: 5px;
+
+}
